@@ -1,8 +1,11 @@
 {
   "version": 2,
   "functions": {
-    "api/*.js": {
+    "reviews.js": {
       "runtime": "nodejs18.x"
     }
-  }
+  },
+  "routes": [
+    { "src": "/api/reviews", "dest": "reviews.js" }
+  ]
 }
