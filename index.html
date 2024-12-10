@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="https://i.postimg.cc/zf2p1Fm9/android-chrome-512x512.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS Styles -->
@@ -20,8 +19,8 @@
             padding: 0;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f7fb;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
             color: #333;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -38,14 +37,16 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px 0;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
             z-index: 1000;
             transition: background 0.3s, padding 0.3s;
         }
         nav.scrolled {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
+            background: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         nav ul {
             list-style: none;
@@ -56,13 +57,13 @@
             padding-left: 0;
         }
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
             position: relative;
         }
         nav ul li a {
-            color: #fff;
-            font-weight: 600;
-            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
             position: relative;
             text-transform: uppercase;
             transition: color 0.3s;
@@ -92,7 +93,7 @@
             right: 20px;
             transform: translateY(-50%);
             font-size: 24px;
-            color: #fff;
+            color: #333;
             cursor: pointer;
         }
 
@@ -138,24 +139,25 @@
             transform: scale(1.05);
         }
         header h1 {
-            font-size: 72px;
-            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 60px;
+            margin: 20px 0 10px 0;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             animation: slideInDown 1s ease-out;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
         header h2 {
-            font-size: 28px;
+            font-size: 22px;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             line-height: 1.4;
             animation: slideInUp 1s ease-out;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
         }
         header p {
-            font-size: 20px;
-            max-width: 750px;
+            font-size: 18px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
             animation: fadeIn 2s ease-in-out;
@@ -174,46 +176,47 @@
             z-index: 2;
         }
         .scroll-down img {
-            width: 40px;
+            width: 35px;
             animation: bounce 2s infinite;
             cursor: pointer;
         }
 
         /* Section Styles */
         section {
-            padding: 120px 20px;
+            padding: 80px 20px;
             text-align: center;
             background: #ffffff;
             transition: padding 0.5s ease-in-out;
         }
         section h2 {
-            font-size: 40px;
-            margin-bottom: 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
             position: relative;
             display: inline-block;
             color: #00aaff;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         section h2::after {
             content: '';
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background: #00aaff;
             position: absolute;
-            bottom: -10px;
+            bottom: -5px;
             left: 50%;
             transform: translateX(-50%);
             border-radius: 2px;
         }
         section p {
-            font-size: 20px;
+            font-size: 18px;
             color: #555;
             margin-bottom: 40px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         /* Services Section */
@@ -223,18 +226,6 @@
             border-radius: 15px;
             position: relative;
             overflow: hidden;
-        }
-        .services::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, #00aaff 25%, #ffffff 25%, #ffffff 50%, #00aaff 50%, #00aaff 75%, #ffffff 75%, #ffffff);
-            background-size: 50px 50px;
-            opacity: 0.1;
-            z-index: 0;
         }
         .services h2, .services p {
             position: relative;
@@ -251,38 +242,33 @@
         }
         .service-item {
             background: #ffffff;
-            width: 280px;
-            padding: 30px 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            width: 300px;
+            padding: 25px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
             position: relative;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
         }
         .service-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
         .service-item img {
-            width: 80px;
-            margin-bottom: 20px;
+            width: 60px;
+            margin-bottom: 15px;
             transition: transform 0.3s;
         }
         .service-item:hover img {
             transform: scale(1.1);
         }
         .service-item h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #00aaff;
-            font-weight: bold;
-        }
-        .service-item p.price {
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
             margin-bottom: 10px;
+            color: #00aaff;
+            font-weight: 600;
         }
         .service-item p.description {
             font-size: 16px;
@@ -298,21 +284,9 @@
         /* Why Choose Us Section */
         .why-choose-us {
             background-color: #ffffff;
-            padding: 120px 20px;
+            padding: 80px 20px;
             position: relative;
             overflow: hidden;
-        }
-        .why-choose-us::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(135deg, #ffecd2 25%, #fcb69f 25%, #fcb69f 50%, #ffecd2 50%, #ffecd2 75%, #fcb69f 75%, #fcb69f);
-            background-size: 100px 100px;
-            opacity: 0.05;
-            z-index: 0;
         }
         .why-choose-us h2, .why-choose-us .points {
             position: relative;
@@ -333,46 +307,39 @@
             background: #f9fafb;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             text-align: left;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .why-point:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
         .why-point h3 {
+            font-family: 'Poppins', sans-serif;
             color: #00aaff;
             margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
         }
         .why-point p {
             color: #555;
             line-height: 1.6;
+            font-size: 16px;
         }
 
         /* Contact Section */
         .contact {
             background-color: #ffffff;
-            padding: 100px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 80px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             border-radius: 10px;
             position: relative;
             overflow: hidden;
-        }
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, #00aaff 10%, #ffffff 10%, #ffffff 50%, #00aaff 50%, #00aaff 90%, #ffffff 90%, #ffffff);
-            background-size: 100px 100px;
-            opacity: 0.05;
-            z-index: 0;
+            text-align: center;
         }
         .contact .info {
-            font-size: 22px;
+            font-size: 18px;
             margin-bottom: 40px;
             line-height: 1.8;
             color: #555;
@@ -386,22 +353,158 @@
         }
         .contact a.button {
             display: inline-block;
-            padding: 18px 36px;
+            padding: 15px 30px;
             background-color: #00aaff;
             color: #fff;
-            border-radius: 10px;
-            font-size: 20px;
+            border-radius: 8px;
+            font-size: 18px;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
             margin-top: 20px;
             animation: fadeIn 2s ease-in-out;
             position: relative;
             z-index: 1;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .contact a.button:hover {
             background-color: #008ecc;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: #f9fafb;
+            padding: 80px 20px;
+        }
+        .reviews h2 {
+            margin-bottom: 40px;
+        }
+        .reviews .review-form {
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .reviews .review-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .reviews .review-form input[type="text"],
+        .reviews .review-form input[type="email"],
+        .reviews .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .reviews .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        .reviews .star-rating input {
+            display: none;
+        }
+        .reviews .star-rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .reviews .star-rating input:checked ~ label {
+            color: #ffa500;
+        }
+        .reviews .filter-container {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .reviews .filter-container select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .reviews .review-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .reviews .review-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .reviews .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .reviews .review-header .review-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .reviews .review-header .review-rating {
+            color: #ffa500;
+            font-size: 16px;
+        }
+        .reviews .review-comment {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+        .reviews .review-replies {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .reviews .reply-form {
+            display: none;
+            margin-top: 20px;
+        }
+        .reviews .reply-form.show {
+            display: block;
+        }
+        .reviews .reply-form input[type="text"],
+        .reviews .reply-form input[type="email"],
+        .reviews .reply-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        .reviews .reply-button, .reviews .submit-reply {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #00aaff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .reviews .reply-button:hover,
+        .reviews .submit-reply:hover {
+            background: #008ecc;
+        }
+
+        .reviews .reply-item {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .reviews .reply-header {
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
         /* Footer Styles */
@@ -459,12 +562,13 @@
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
-                background: rgba(0, 0, 0, 0.9);
+                background: #ffffff;
                 position: absolute;
                 top: 60px;
                 left: 0;
                 width: 100%;
                 display: none;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             }
             nav ul.active {
                 display: flex;
@@ -480,23 +584,23 @@
                 padding: 60px 20px 40px 20px;
             }
             header h1 {
-                font-size: 50px;
+                font-size: 48px;
             }
             header h2 {
-                font-size: 22px;
+                font-size: 20px;
             }
             header p {
-                font-size: 18px;
+                font-size: 16px;
             }
             .service-item, .why-point {
                 width: 100%;
             }
             .contact .info {
-                font-size: 18px;
+                font-size: 16px;
             }
             .contact a.button {
-                font-size: 18px;
-                padding: 16px 30px;
+                font-size: 16px;
+                padding: 14px 28px;
             }
             footer {
                 font-size: 14px;
@@ -507,26 +611,26 @@
         }
         @media (max-width: 480px) {
             header h1 {
-                font-size: 40px;
+                font-size: 36px;
             }
             header h2 {
                 font-size: 18px;
             }
             header p {
-                font-size: 16px;
+                font-size: 14px;
             }
             .service-item p.description, .why-point p {
                 font-size: 14px;
             }
             .why-point h3 {
-                font-size: 20px;
+                font-size: 18px;
             }
             .contact .info {
-                font-size: 16px;
+                font-size: 14px;
             }
             .contact a.button {
                 font-size: 16px;
-                padding: 14px 28px;
+                padding: 12px 24px;
             }
             footer a {
                 font-size: 18px;
@@ -551,6 +655,8 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#why-choose-us">Why Choose Us</a></li>
             <li><a href="#contact">Contact</a></li>
+            <!-- New link to Reviews -->
+            <li><a href="#reviews">Reviews</a></li>
         </ul>
     </nav>
 
@@ -577,26 +683,28 @@
             <div class="service-item">
                 <img src="https://i.postimg.cc/fy2R81n3/promo-poster.jpg" alt="Promo Poster">
                 <h3>Promo Poster</h3>
-                <p class="price"><strong></strong></p>
-                <p class="description">Promo posters play a pivotal role in capturing your audience's attention and conveying your message in a visually compelling way. At EDigital Solutions, we understand the importance of a well-designed poster in your marketing strategy. Our team of talented designers creates promotional posters that are not only eye-catching but also strategically crafted to communicate your message effectively. Whether you're promoting an event, launching a product, or announcing a special offer, our posters are designed to make a lasting impression and drive engagement.</p>
+                <p class="description">Promo posters play a pivotal role in capturing your audience's attention and conveying your message in a visually compelling way. At EDigital Solutions, we understand the importance of a well-designed poster in your marketing strategy. Our team of talented designers creates promotional posters that are not only eye-catching but also strategically crafted to communicate your message effectively.</p>
             </div>
             <div class="service-item">
                 <img src="https://i.postimg.cc/K8dRSXKB/logo.jpg" alt="Logo Design">
                 <h3>Logo Design</h3>
-                <p class="price"><strong></strong></p>
-                <p class="description">A logo is the visual cornerstone of your brand identity. It is the first impression your audience has of your business, and it needs to be memorable and meaningful. Our logo design service is dedicated to creating unique and professional logos that truly represent your brand's essence. We take the time to understand your business values, target audience, and vision to craft a logo that stands out in the crowded marketplace. A well-designed logo can significantly impact your brand recognition, and we're here to help you achieve that.</p>
+                <p class="description">A logo is the visual cornerstone of your brand identity. Our logo design service is dedicated to creating unique and professional logos that truly represent your brand's essence. We take the time to understand your business values, target audience, and vision to craft a logo that stands out in the crowded marketplace.</p>
             </div>
             <div class="service-item">
                 <img src="https://i.postimg.cc/sfwxfGQV/exspress-video.jpg" alt="Express Video">
                 <h3>Express Video</h3>
-                <p class="price"><strong></strong></p>
-                <p class="description">In the digital age, video content is one of the most powerful tools for engaging with your audience. Our express video service is designed to deliver high-quality videos that captivate, inform, and inspire. Whether you need a promotional video, an explainer video, or a social media clip, we have the skills and creativity to bring your ideas to life. Our videos are tailored to convey your message effectively and resonate with your audience, helping you to build a stronger connection and drive more engagement.</p>
+                <p class="description">Video content is one of the most powerful tools for engaging with your audience. Our express video service delivers high-quality videos that captivate, inform, and inspire. Whether you need a promotional video, an explainer video, or a social media clip, we have the skills and creativity to bring your ideas to life.</p>
             </div>
             <div class="service-item">
                 <img src="https://i.postimg.cc/6q5QLtSJ/website.jpg" alt="Custom Website Design">
                 <h3>Custom Website Design</h3>
-                <p class="price"><strong></strong></p>
-                <p class="description">Your website is often the first point of contact potential customers have with your business. A well-designed website not only enhances your brand's credibility but also provides a seamless user experience. At EDigital Solutions, we specialize in creating custom websites that are tailored to your specific needs. Our designs are responsive, visually appealing, and optimized for performance. We take a comprehensive approach, considering everything from design aesthetics to functionality and search engine optimization (SEO). Our goal is to provide you with a website that not only looks great but also drives traffic and converts visitors into customers.</p>
+                <p class="description">Your website is often the first point of contact potential customers have with your business. We specialize in creating custom websites that are responsive, visually appealing, and optimized for performance. We consider everything from design aesthetics to functionality and SEO to help you achieve a website that looks great and drives results.</p>
+            </div>
+            <!-- New Product: Web Hosting Server Management -->
+            <div class="service-item">
+                <img src="https://i.postimg.cc/zXN3Fsr8/webhosting-sever.jpg" alt="Web Hosting Server Management">
+                <h3>Web Hosting Server Management</h3>
+                <p class="description">We handle all aspects of web hosting server management. From setup and configuration to maintenance and monitoring, we ensure your servers remain secure, optimized, and reliable. Focus on your core business while we take care of the technical side.</p>
             </div>
         </div>
     </section>
@@ -607,27 +715,27 @@
         <div class="points">
             <div class="why-point">
                 <h3>Tailored Solutions</h3>
-                <p>We understand that every business is unique, and so are its needs. That's why we offer customized solutions that are tailored to fit your specific requirements. Our approach is client-focused, ensuring that we deliver services that align with your vision and objectives. We work closely with you to understand your goals and create digital solutions that help you achieve them.</p>
+                <p>We deliver customized solutions aligned with your vision and objectives. Our client-focused approach ensures that we understand your needs and work to achieve your goals.</p>
             </div>
             <div class="why-point">
                 <h3>Experienced Team</h3>
-                <p>Our team of experts brings a wealth of experience and a passion for excellence to every project. With a deep understanding of the latest trends and technologies, we are well-equipped to handle any challenge and deliver outstanding results. Our team is composed of skilled professionals who are dedicated to providing the highest quality of service and support.</p>
+                <p>Our experts bring a wealth of experience and a passion for excellence. We stay on top of the latest trends and technologies to deliver outstanding results.</p>
             </div>
             <div class="why-point">
                 <h3>Quality and Value</h3>
-                <p>We are committed to providing high-quality services at competitive prices. Our goal is to deliver value that exceeds your expectations, ensuring you get the most out of your investment. We believe that quality is not an option but a standard, and we strive to deliver the best possible results for our clients.</p>
+                <p>We provide high-quality services at competitive prices, delivering value that exceeds your expectations. Quality is our standard, not an option.</p>
             </div>
             <div class="why-point">
                 <h3>Customer Satisfaction</h3>
-                <p>At EDigital Solutions, customer satisfaction is our top priority. We work closely with you throughout the project to ensure your needs are met and you are delighted with the final product. Our success is measured by your satisfaction and the positive impact our services have on your business. We are committed to providing exceptional customer service and support, ensuring that you have a positive experience working with us.</p>
+                <p>Customer satisfaction is our top priority. We work closely with you, ensuring you’re delighted with the final product and experience.</p>
             </div>
             <div class="why-point">
                 <h3>Innovation and Creativity</h3>
-                <p>We believe in the power of innovation and creativity to drive success. Our team is constantly exploring new ideas and technologies to provide cutting-edge solutions that keep you ahead of the competition. We are passionate about what we do, and it shows in the quality and creativity of our work.</p>
+                <p>We embrace innovation and creativity to keep you ahead of the competition. Our solutions are cutting-edge, strategic, and effective.</p>
             </div>
             <div class="why-point">
                 <h3>Proven Results</h3>
-                <p>We have a proven track record of delivering successful projects for our clients. Our portfolio includes a diverse range of projects, from small businesses to large enterprises, across various industries. We take pride in our work and are committed to helping our clients achieve their digital goals.</p>
+                <p>We have a track record of successful projects across various industries. Our experience drives the results you need.</p>
             </div>
         </div>
     </section>
@@ -638,9 +746,54 @@
         <div class="info">
             <p>Ready to elevate your business? Partner with EDigital Solutions for bespoke digital services that drive powerful results. Whether you're looking to revamp your brand with a new logo, engage your audience with captivating videos, or build a robust online presence with a custom website, we are here to help.</p>
             <p><strong>Phone:</strong> +27 82 798 3974</p>
-            <p><strong>Email:</strong> ewaldpret6@gmail.com </p>
+            <p><strong>Email:</strong> <a href="mailto:ewaldpret6@gmail.com" class="email">ewaldpret6@gmail.com</a></p>
         </div>
         <a href="https://wa.me/27827983974" class="button">WHATSAPP US NOW</a>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <h2>Ratings & Reviews</h2>
+        <p>Share your experience with EDigital Solutions! Leave a rating, comment, and browse what others have said.</p>
+
+        <div class="review-form">
+            <h3>Leave a Review</h3>
+            <form id="reviewForm">
+                <label for="reviewerName">Name</label>
+                <input type="text" id="reviewerName" name="reviewerName" required>
+
+                <label for="reviewerEmail">Email</label>
+                <input type="email" id="reviewerEmail" name="reviewerEmail" required>
+
+                <label>Rating</label>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+                </div>
+
+                <label for="reviewComment">Comment</label>
+                <textarea id="reviewComment" name="reviewComment" rows="4" required></textarea>
+
+                <button type="submit" style="padding:10px 20px;background:#00aaff;color:#fff;border:none;border-radius:5px;cursor:pointer;">Submit Review</button>
+            </form>
+        </div>
+
+        <div class="filter-container">
+            <label for="filterRating">Filter by rating:</label>
+            <select id="filterRating">
+                <option value="all">All</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+        </div>
+
+        <div class="review-list" id="reviewList"></div>
     </section>
 
     <!-- Footer -->
@@ -648,10 +801,11 @@
         <p>
             <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank"><i class="fab fa-facebook-f"></i></a>
         </p>
+        <p>&copy; 2024 EDigital Solutions. All rights reserved.</p>
     </footer>
 
     <!-- Optional JavaScript for Mobile Navigation Toggle -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         $(document).ready(function(){
             // Toggle navigation on mobile
             $('.menu-toggle').click(function(){
@@ -674,5 +828,7 @@
         });
     </script>
 
+    <!-- Your custom JS file -->
+    <script src="scripts.js"></script>
 </body>
 </html>
