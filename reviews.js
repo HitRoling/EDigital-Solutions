@@ -1,17 +1,15 @@
-module.exports = async (req, res) => {
-  const blobBaseUrl = 'https://fmlx9dslkdv19ays.public.blob.vercel-storage.com';
-  const fileUrl = `${blobBaseUrl}/reviews.json`; 
-  // Adjust the URL to match your blob's base URL and desired file name.
+const blobBaseUrl = 'https://fmlx9dslkdv19ays.public.blob.vercel-storage.com'; // Replace with your base URL
+const fileUrl = `${blobBaseUrl}/reviews.json`; 
 
+module.exports = async (req, res) => {
   if (req.method === 'GET') {
-    // Fetch existing reviews
     let reviews = [];
     try {
       const response = await fetch(fileUrl);
       if (response.ok) {
         reviews = await response.json();
       } else if (response.status === 404) {
-        // No file found means no reviews yet
+        // No reviews.json file yet, so no reviews
         reviews = [];
       } else {
         throw new Error(`Error fetching reviews: ${response.statusText}`);
@@ -28,7 +26,6 @@ module.exports = async (req, res) => {
       return res.status(400).json({ error: 'Missing fields' });
     }
 
-    // Fetch existing reviews
     let reviews = [];
     try {
       const response = await fetch(fileUrl);
@@ -37,13 +34,12 @@ module.exports = async (req, res) => {
       } else if (response.status === 404) {
         reviews = [];
       } else {
-        throw new Error(`Error fetching reviews: ${response.statusText}`);
+        throw new Error(`Error fetching current reviews: ${response.statusText}`);
       }
     } catch (error) {
       return res.status(500).json({ error: error.message });
     }
 
-    // Add new review
     const newReview = {
       id: Date.now(),
       name,
@@ -52,10 +48,8 @@ module.exports = async (req, res) => {
       comment,
       replies: []
     };
-    reviews.unshift(newReview); // Add to the top
+    reviews.unshift(newReview);
 
-    // Upload updated reviews back to blob storage
-    // You must have the VERCEL_BLOB_WRITE_ONLY_TOKEN set in Vercel Environment Variables.
     try {
       const uploadResponse = await fetch(fileUrl, {
         method: 'PUT',
@@ -67,7 +61,7 @@ module.exports = async (req, res) => {
       });
 
       if (!uploadResponse.ok) {
-        throw new Error(`Error uploading reviews: ${uploadResponse.statusText}`);
+        throw new Error(`Error uploading updated reviews: ${uploadResponse.statusText}`);
       }
 
       return res.status(200).json(newReview);
