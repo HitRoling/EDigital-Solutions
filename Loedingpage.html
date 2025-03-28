@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDigital Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* The div that wraps the mobile-specific loading screen */
+        .mobile-loading {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Video settings */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none; /* Initially hidden */
+        }
+
+        /* Overlay container */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .overlay h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .overlay button {
+            background-color: #ff5500;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .overlay button:hover {
+            background-color: #e64a00;
+        }
+
+        /* Media query to hide the loading screen on desktops */
+        @media (min-width: 768px) {
+            .mobile-loading {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The div that wraps the mobile-specific loading screen -->
+    <div class="mobile-loading">
+        <!-- Video (Initially hidden) -->
+        <video id="loadingVideo">
+            <source src="https://edigitalsolutions.vercel.app/website.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay with Play button -->
+        <div class="overlay" id="overlay">
+            <h1>EDIGITAL SOLUTIONS</h1>
+            <button id="playButton">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const video = document.getElementById("loadingVideo");
+        const playButton = document.getElementById("playButton");
+        const overlay = document.getElementById("overlay");
+
+        // Function to detect if the device is mobile or PC
+        function isMobile() {
+            return window.innerWidth < 768;  // Adjust this value for other screen sizes if needed
+        }
+
+        // If it's a PC, immediately redirect
+        if (!isMobile()) {
+            window.location.href = "https://edigitalsolutions.vercel.app/"; // Redirect to your main page for desktop users
+        }
+
+        // Play button click event for mobile
+        playButton.addEventListener("click", function() {
+            // Unmute and play the video immediately
+            video.muted = false; // Ensure the video is not muted
+            video.style.display = "block"; // Make the video visible
+            video.play(); // Start the video
+
+            // Hide the overlay
+            overlay.style.display = "none";
+        });
+
+        // When the video ends, redirect to the main website
+        video.onended = function() {
+            window.location.href = "https://edigitalsolutions.vercel.app/"; // Redirect to your main page after video ends
+        };
+    </script>
+
+</body>
+</html>
