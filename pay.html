@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Subscribe to TideCraft Yacht System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
   <script>
     Paddle.Setup({ vendor: 236064 }); // Your Vendor ID
@@ -23,9 +24,16 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       text-align: center;
+      max-width: 90%;
+      width: 400px;
     }
     h2 {
       margin-top: 0;
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
     }
     button {
       background: #005ce6;
@@ -35,10 +43,32 @@
       border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
-      margin-top: 1rem;
+      width: 100%;
     }
     button:hover {
       background: #0042b3;
+    }
+    .links {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    .links a {
+      color: #005ce6;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 1.5rem 1rem;
+      }
+      button {
+        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
+      }
     }
   </style>
 </head>
@@ -47,6 +77,12 @@
     <h2>Subscribe to TideCraft Services</h2>
     <p>R300/month – Full access to the yacht system</p>
     <button onclick="openCheckout()">Subscribe Now</button>
+
+    <div class="links">
+      <a href="/terms.html" target="_blank">Terms of Service</a> |
+      <a href="/privacy.html" target="_blank">Privacy Policy</a> |
+      <a href="/refund.html" target="_blank">Refund Policy</a>
+    </div>
   </div>
 
   <script>
@@ -54,8 +90,8 @@
       Paddle.Checkout.open({
         product: 'pro_01jy1qqam7npm4pjfhxdrefsgq', // Your Product ID
         successCallback: function(data) {
-          alert("Payment successful! You can now log in to your yacht system.");
-          // Optionally redirect:
+          alert("✅ Payment successful! You can now log in to your yacht system.");
+          // Optional: redirect to your system
           // window.location.href = "http://192.168.0.88/yacht.php";
         }
       });
