@@ -601,12 +601,24 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>
-            <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        </p>
-        <p>&copy; 2024 EDigital Solutions. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>
+        <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </p>
+    <p>&copy; <span id="footer-year"></span> EDigital Solutions. All rights reserved.</p>
+
+    <script>
+        (function() {
+            const startYear = 2024;
+            const currentYear = new Date().getFullYear();
+            const yearText = currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+            document.getElementById('footer-year').textContent = yearText;
+        })();
+    </script>
+</footer>
+
 
     <script>
         $(document).ready(function(){
