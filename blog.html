@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | EDigital Solutions</title>
+    <meta name="description" content="Real-world compliance, safety, and operational insights built for South African industries. Written with field execution, audit evidence, and implementation reality in mind.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#00aaff">
+    <meta name="keywords" content="SHEQ software South Africa, compliance system, eSHEQ Comply, safety inspections, contractor management, audit system, risk management software, offline inspections, construction SHEQ, mining compliance">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog | EDigital Solutions">
+    <meta property="og:description" content="Real-world compliance, safety, and operational insights built for South African industries. Built by the team behind eSHEQ Comply.">
+    <meta property="og:site_name" content="EDigital Solutions | eSHEQ Comply Ecosystem">
+    <meta property="og:image" content="https://edigitalsolutions.vercel.app/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512" href="https://edigitalsolutions.vercel.app/logo.jpg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="nav-styles.css">
+    <!-- CSS Styles -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 2000;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus {
+            top: 10px;
+            outline: 2px solid #00aaff;
+            outline-offset: 2px;
+        }
+
+        .powered {
+            font-size: 14px;
+            color: #555;
+        }
+        .powered a {
+            color: #00aaff;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: #00aaff;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.18);
+        }
+        .btn-primary:hover {
+            background: #008ecc;
+            box-shadow: 0 14px 28px rgba(0, 170, 255, 0.22);
+        }
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #ffffff;
+            transition: padding 0.5s ease-in-out;
+        }
+
+        #blog .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        #blog .hub-card {
+            grid-column: span 6;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.10);
+            border-radius: 14px;
+            padding: 18px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        #blog .hub-card h3 {
+            margin-bottom: 8px;
+        }
+        #blog .hub-card ul {
+            margin-top: 10px;
+            padding-left: 18px;
+            color: #555;
+        }
+        #blog .hub-card li {
+            margin: 6px 0;
+        }
+        section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            color: #00aaff;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        section h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: #00aaff;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+        }
+        footer a {
+            color: #00aaff;
+            margin: 0 15px;
+            transition: color 0.3s;
+            font-size: 20px;
+        }
+        footer a:hover {
+            color: #008ecc;
+        }
+
+        /* Page Intro */
+        .page-intro {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .page-intro h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #00aaff;
+            font-weight: 700;
+        }
+        .page-intro p {
+            font-size: 20px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #blog .hub-card {
+                grid-column: span 12;
+            }
+        }
+        @media (max-width: 480px) {
+            footer a {
+                font-size: 18px;
+                margin: 0 10px;
+            }
+        }
+    </style>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#blog">Skip to content</a>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "EDigital Solutions",
+            "url": "https://edigitalsolutions.vercel.app/",
+            "logo": "https://edigitalsolutions.vercel.app/logo.jpg",
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=61569058768541"
+            ],
+            "description": "Professional websites, branding, promo design and video content. Built by the team behind eSHEQ Comply."
+        }
+    </script>
+
+    <main id="main">
+
+        <!-- Page Intro -->
+        <section class="page-intro">
+            <h1>Blog</h1>
+            <p>Stay updated with the latest in operational compliance and digital workflows. Our blog features practical insights, case studies, and expert advice for South African businesses navigating SHEQ challenges. EDigital Solutions is proudly the team that built <a href="https://esheqcomply.com/" target="_blank" rel="noopener" style="text-decoration: underline;">eSHEQ Comply</a>.</p>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Blog & Operational Insights</h2>
+            <p>Real-world compliance, safety, and operational insights built for South African industries. Written with field execution, audit evidence, and implementation reality in mind. Powered by the team behind <a href="https://esheqcomply.com/" target="_blank" rel="noopener" style="text-decoration: underline;">eSHEQ Comply</a>.</p>
+
+            <div class="hub-grid">
+                <div class="hub-card">
+                    <h3>Why Excel-Based SHEQ Systems Fail in Real Operations</h3>
+                    <p class="description">Spreadsheets break under audit pressure, version-control issues, and contractor tracking complexity.</p>
+                    <ul>
+                        <li>Evidence trails get lost</li>
+                        <li>Expiry documents aren’t controlled</li>
+                        <li>Corrective actions don’t close consistently</li>
+                    </ul>
+                </div>
+                <div class="hub-card">
+                    <h3>How Mobile Inspections Improve Field Accountability</h3>
+                    <p class="description">Capture findings onsite, attach photo evidence, and route actions to owners—without delays.</p>
+                    <ul>
+                        <li>Mobile-first capture</li>
+                        <li>Offline worksite readiness</li>
+                        <li>Accountability by role and due date</li>
+                    </ul>
+                </div>
+                <div class="hub-card">
+                    <h3>Contractor Compliance Challenges in Construction</h3>
+                    <p class="description">Managing onboarding, documents, and site readiness without losing control or increasing admin load.</p>
+                    <ul>
+                        <li>Pre-qualification workflows</li>
+                        <li>Expiry and renewal cycles</li>
+                        <li>Site readiness packs</li>
+                    </ul>
+                </div>
+                <div class="hub-card">
+                    <h3>Reducing Corrective Action Backlogs in SHEQ Systems</h3>
+                    <p class="description">Why actions don’t close—and how workflow automation fixes ownership and follow-through.</p>
+                    <ul>
+                        <li>Assignment and escalation</li>
+                        <li>Evidence on closure</li>
+                        <li>Dashboards for visibility</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="proudly-clients">
+            <h2>Proudly Clients</h2>
+            <p>We partner with teams that value quality, speed, and measurable results. One of our flagship builds is <a href="https://esheqcomply.com/" target="_blank" rel="noopener" style="text-decoration: underline;">eSHEQ Comply</a>—a compliance system built for real-world operations.</p>
+
+            <div style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap;">
+                <a href="https://esheqcomply.com/" target="_blank" rel="noopener" aria-label="eSHEQ Comply">
+                    <img src="https://esheqcomply.com/logo.jpg" alt="eSHEQ Comply logo" style="width: 240px; height: 90px; object-fit: contain; border-radius: 14px; box-shadow: 0 10px 24px rgba(0,0,0,0.10); background: #fff; border: 1px solid rgba(0,0,0,0.08); padding: 10px;">
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </p>
+        <p>&copy; <span id="footer-year"></span> EDigital Solutions. All rights reserved.</p>
+
+        <script>
+            (function() {
+                const startYear = 2024;
+                const currentYear = new Date().getFullYear();
+                const yearText = currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+                document.getElementById('footer-year').textContent = yearText;
+            })();
+        </script>
+    </footer>
+
+    <!-- Load Navigation Component -->
+    <script src="load-nav.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Toggle navigation on mobile
+            $('.menu-toggle').click(function(){
+                $('nav ul').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            $('.menu-toggle').keypress(function(e){
+                if(e.key === 'Enter'){
+                    $('nav ul').toggleClass('active');
+                }
+            });
+
+            // Smooth scroll and close menu on click
+            $('nav ul li a').click(function(){
+                $('nav ul').removeClass('active');
+            });
+
+            // Change nav background on scroll
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 50){
+                    $('nav').addClass('scrolled');
+                } else {
+                    $('nav').removeClass('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

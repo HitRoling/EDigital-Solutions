@@ -1,0 +1,200 @@
+<style>
+        /* Navigation Menu */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 12px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0,170,255,0.1);
+        }
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.99);
+            padding: 8px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        nav .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #111;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            font-size: 18px;
+        }
+        nav .brand img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        nav .brand img:hover {
+            transform: scale(1.05);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: 8px;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            display: inline-block;
+            color: #444;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+        nav ul li a:hover {
+            color: #00aaff;
+            background: rgba(0,170,255,0.08);
+        }
+        nav ul li a.active {
+            color: #fff;
+            background: #00aaff;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(0,170,255,0.35);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .menu-toggle:hover {
+            color: #00aaff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.98);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                display: none;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                padding: 10px 0;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 8px 0;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li a {
+                display: block;
+                padding: 12px 20px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        @media (max-width: 480px) {
+            nav .brand img {
+                width: 56px;
+                height: 28px;
+            }
+            nav .brand span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="EDigital Solutions Home">
+                <img src="https://edigitalsolutions.vercel.app/logo.jpg" alt="EDigital Solutions logo">
+                <span>EDigital Solutions</span>
+            </a>
+
+            <div class="menu-toggle" aria-label="Open menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="knowledge-hub.html">Knowledge Hub</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        (function() {
+            // Auto-detect active page
+            var path = window.location.pathname.split('/').pop() || 'index.html';
+            if (path === '') path = 'index.html';
+            var links = document.querySelectorAll('nav ul li a');
+            links.forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (path === href || path === '' && href === 'index.html') {
+                    link.classList.add('active');
+                }
+            });
+
+            // Mobile toggle
+            var toggle = document.querySelector('.menu-toggle');
+            var menu = document.querySelector('nav ul');
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    menu.classList.toggle('active');
+                    toggle.classList.toggle('active');
+                });
+                toggle.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') menu.classList.toggle('active');
+                });
+                menu.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        menu.classList.remove('active');
+                    });
+                });
+            }
+
+            // Scroll effect
+            window.addEventListener('scroll', function() {
+                var nav = document.getElementById('navbar');
+                if (nav) {
+                    if (window.scrollY > 50) nav.classList.add('scrolled');
+                    else nav.classList.remove('scrolled');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

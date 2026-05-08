@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | EDigital Solutions</title>
+    <meta name="description" content="We offer a comprehensive suite of digital solutions tailored to your business. Our dedicated experts focus on delivering high-quality work that drives meaningful results.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#00aaff">
+    <meta name="keywords" content="SHEQ software South Africa, compliance system, eSHEQ Comply, safety inspections, contractor management, audit system, risk management software, offline inspections, construction SHEQ, mining compliance">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Services | EDigital Solutions">
+    <meta property="og:description" content="We offer a comprehensive suite of digital solutions tailored to your business. Built by the team behind eSHEQ Comply.">
+    <meta property="og:site_name" content="EDigital Solutions | eSHEQ Comply Ecosystem">
+    <meta property="og:image" content="https://edigitalsolutions.vercel.app/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512" href="https://edigitalsolutions.vercel.app/logo.jpg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="nav-styles.css">
+    <!-- CSS Styles -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 2000;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus {
+            top: 10px;
+            outline: 2px solid #00aaff;
+            outline-offset: 2px;
+        }
+
+        .powered {
+            font-size: 14px;
+            color: #555;
+        }
+        .powered a {
+            color: #00aaff;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: #00aaff;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.18);
+        }
+        .btn-primary:hover {
+            background: #008ecc;
+            box-shadow: 0 14px 28px rgba(0, 170, 255, 0.22);
+        }
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #ffffff;
+            transition: padding 0.5s ease-in-out;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #f0f4f8;
+            padding: 60px 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .services .service-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        .service-item {
+            background: #ffffff;
+            width: 300px;
+            padding: 25px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .service-item img {
+            width: 60px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        .service-item:hover img {
+            transform: scale(1.1);
+        }
+        .service-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #00aaff;
+            font-weight: 600;
+        }
+        .service-item p.description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            text-align: left;
+            transition: color 0.3s;
+        }
+        .service-item:hover p.description {
+            color: #00aaff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+        }
+        footer a {
+            color: #00aaff;
+            margin: 0 15px;
+            transition: color 0.3s;
+            font-size: 20px;
+        }
+        footer a:hover {
+            color: #008ecc;
+        }
+
+        /* Page Intro */
+        .page-intro {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .page-intro h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #00aaff;
+            font-weight: 700;
+        }
+        .page-intro p {
+            font-size: 20px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .service-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-item {
+                width: 90%;
+            }
+        }
+        @media (max-width: 768px) {
+            .service-item {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .service-item p.description {
+                font-size: 14px;
+            }
+            .service-item h3 {
+                font-size: 18px;
+            }
+            footer a {
+                font-size: 18px;
+                margin: 0 10px;
+            }
+        }
+    </style>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#services">Skip to content</a>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "EDigital Solutions",
+            "url": "https://edigitalsolutions.vercel.app/",
+            "logo": "https://edigitalsolutions.vercel.app/logo.jpg",
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=61569058768541"
+            ],
+            "description": "Professional websites, branding, promo design and video content. Built by the team behind eSHEQ Comply."
+        }
+    </script>
+
+    <main id="main">
+
+        <!-- Page Intro -->
+        <section class="page-intro">
+            <h1>Our Services</h1>
+            <p>At EDigital Solutions, we specialize in delivering high-quality digital services that drive results. From branding to web development, our team ensures every project aligns with your business goals. Built by the team behind eSHEQ Comply, we bring operational expertise to every digital solution.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <h2>Comprehensive Digital Solutions</h2>
+            <p>We offer a comprehensive suite of digital solutions tailored to your business. Our dedicated experts focus on delivering high-quality work that drives meaningful results. From eye-catching promo posters to custom website designs, our services are designed to elevate your brand and online presence.</p>
+            <div class="service-items">
+                <div class="service-item">
+                    <img src="https://static.vecteezy.com/system/resources/previews/002/043/612/non_2x/special-offer-banner-sale-promotion-web-market-poster-file-vector.jpg" alt="Promo Poster">
+                    <h3>Promo Posters</h3>
+                    <p class="description">Capture your audience’s attention with professionally designed promotional posters. Whether for events, product launches, or special offers, our team crafts posters that make a lasting impact and align seamlessly with your brand messaging.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/12/28/08/15/hummingbird-1935665_640.png" alt="Logo Design">
+                    <h3>Logo Design</h3>
+                    <p class="description">Your logo is the visual cornerstone of your brand. We create distinctive, memorable logos that resonate with your values and appeal to your target audience—ensuring your brand stands out in a crowded marketplace.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://d2oto3d7z6t29c.cloudfront.net/entries/transformed/08/7c/768726_5392f133b18842f9bef23e8c978047bc.jpeg" alt="Express Video">
+                    <h3>Express Video</h3>
+                    <p class="description">Engaging video content can captivate audiences like no other medium. Our express video services deliver high-quality, impactful videos tailored to your message, helping you connect with your viewers and drive engagement.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Nd6wsdUY-90xFAPePZk_EQS725NOilRDUg&s" alt="Custom Website Design">
+                    <h3>Custom Website Design</h3>
+                    <p class="description">A compelling, user-friendly website is the heart of your digital presence. We design fully customized websites that are responsive, visually appealing, and optimized for performance—transforming visitors into loyal customers.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGoytpOeDqbj16e0qVUFk_e6fXh9hAevRgWg&s" alt="Web Hosting Server Management">
+                    <h3>Web Hosting Server Management</h3>
+                    <p class="description">Managing your web hosting environment can be complex. We handle all technical aspects—security, optimization, and maintenance—so you can focus on your core business, confident that your site is always running smoothly.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </p>
+        <p>&copy; <span id="footer-year"></span> EDigital Solutions. All rights reserved.</p>
+
+        <script>
+            (function() {
+                const startYear = 2024;
+                const currentYear = new Date().getFullYear();
+                const yearText = currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+                document.getElementById('footer-year').textContent = yearText;
+            })();
+        </script>
+    </footer>
+
+    <!-- Load Navigation Component -->
+    <script src="load-nav.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Toggle navigation on mobile
+            $('.menu-toggle').click(function(){
+                $('nav ul').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            $('.menu-toggle').keypress(function(e){
+                if(e.key === 'Enter'){
+                    $('nav ul').toggleClass('active');
+                }
+            });
+
+            // Smooth scroll and close menu on click
+            $('nav ul li a').click(function(){
+                $('nav ul').removeClass('active');
+            });
+
+            // Change nav background on scroll
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 50){
+                    $('nav').addClass('scrolled');
+                } else {
+                    $('nav').removeClass('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
