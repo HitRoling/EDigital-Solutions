@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asset Register System | Digital Asset Management Software South Africa | eSHEQ Comply</title>
+
+    <meta name="description" content="Asset register system guide for South African companies. Learn how eSHEQ Comply helps manage equipment, fleet records, asset numbers, fit-for-use status, statutory testing, maintenance, inspections, expiry dates and SHEQ compliance evidence.">
+    <meta name="keywords" content="asset register system, asset management system South Africa, equipment register software, fleet register system, statutory testing register, fit for use register, asset inspection system, SHEQ asset register, eSHEQ Comply assets, asset compliance system, equipment maintenance register, digital asset register">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#00aaff">
+
+    <link rel="canonical" href="https://edigitalsolutions.vercel.app/asset-register-system.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Asset Register System | Digital Asset Management Software">
+    <meta property="og:description" content="A practical asset register system guide for equipment, fleet, fit-for-use status, statutory testing, maintenance, inspections and SHEQ compliance evidence.">
+    <meta property="og:url" content="https://edigitalsolutions.vercel.app/asset-register-system.html">
+    <meta property="og:image" content="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600">
+    <meta property="og:site_name" content="EDigital Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Asset Register System | eSHEQ Comply">
+    <meta name="twitter:description" content="Manage equipment, fleet, asset numbers, fit-for-use status, maintenance, statutory testing and SHEQ asset evidence with eSHEQ Comply.">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="https://edigitalsolutions.vercel.app/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="nav-styles.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 2000;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+            outline: 2px solid #00aaff;
+            outline-offset: 2px;
+        }
+
+        .hero {
+            min-height: 94vh;
+            padding: 135px 20px 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(1100px 650px at 50% 28%, rgba(0,170,255,0.36), rgba(0,0,0,0.76));
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.70));
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1000px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.26);
+            backdrop-filter: blur(6px);
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 58px;
+            line-height: 1.08;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.70);
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.11);
+            padding: 17px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-actions {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-weight: 900;
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #00aaff;
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(0,170,255,0.30);
+        }
+
+        .btn-primary:hover {
+            background: #008ecc;
+        }
+
+        .btn-light {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.32);
+        }
+
+        section {
+            padding: 78px 20px;
+            background: #ffffff;
+        }
+
+        section.alt {
+            background: #f0f4f8;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .section-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 34px;
+            color: #00aaff;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 14px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 3px;
+            background: #00aaff;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 99px;
+        }
+
+        .section-title p {
+            max-width: 920px;
+            margin: 16px auto 0;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .intro-grid,
+        .split-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .content-card,
+        .asset-card,
+        .register-card,
+        .topic-card,
+        .step-card,
+        .faq-item,
+        .banner-card,
+        .status-card,
+        .evidence-card {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.09);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+
+        .content-card {
+            padding: 30px;
+        }
+
+        .content-card h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #00aaff;
+            font-size: 32px;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .content-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            font-size: 23px;
+            margin: 20px 0 8px;
+        }
+
+        .content-card p {
+            color: #555;
+            font-size: 17px;
+            margin-bottom: 14px;
+        }
+
+        .content-card ul {
+            margin: 16px 0 0 20px;
+            color: #555;
+        }
+
+        .content-card li {
+            margin: 8px 0;
+        }
+
+        .intro-image,
+        .split-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+        }
+
+        .intro-image img,
+        .split-image img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+        }
+
+        .status-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .status-card {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .status-card i {
+            color: #00aaff;
+            font-size: 31px;
+            margin-bottom: 12px;
+        }
+
+        .status-card strong {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .status-card span {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .asset-grid,
+        .register-grid,
+        .evidence-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .asset-card,
+        .register-card,
+        .evidence-card,
+        .topic-card,
+        .step-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .asset-card:hover,
+        .register-card:hover,
+        .evidence-card:hover,
+        .topic-card:hover,
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+        }
+
+        .asset-card img,
+        .register-card img,
+        .evidence-card img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            background: #e9eef2;
+        }
+
+        .asset-content,
+        .register-content,
+        .evidence-content {
+            padding: 20px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: #eef8ff;
+            color: #00aaff;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .asset-card h3,
+        .register-card h3,
+        .evidence-card h3,
+        .topic-card h3,
+        .step-card h3,
+        .faq-item h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .asset-card h3,
+        .register-card h3,
+        .evidence-card h3 {
+            font-size: 21px;
+        }
+
+        .asset-card p,
+        .register-card p,
+        .evidence-card p,
+        .topic-card p,
+        .step-card p,
+        .faq-item p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+
+        .read-link {
+            color: #00aaff;
+            font-weight: 900;
+        }
+
+        .read-link:hover {
+            color: #008ecc;
+        }
+
+        .process-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .step-card {
+            padding: 22px;
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #00aaff;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            margin-bottom: 12px;
+            box-shadow: 0 6px 16px rgba(0,170,255,0.25);
+        }
+
+        .step-card h3 {
+            font-size: 18px;
+        }
+
+        .banner-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .banner-card {
+            position: relative;
+            min-height: 380px;
+        }
+
+        .banner-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            object-fit: cover;
+        }
+
+        .banner-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.70));
+        }
+
+        .banner-content {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .banner-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .banner-content p {
+            font-size: 17px;
+        }
+
+        .topic-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .topic-card {
+            padding: 24px;
+        }
+
+        .topic-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .topic-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 14px;
+            background: #eef8ff;
+            color: #00aaff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .topic-card h3 {
+            color: #00aaff;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .topic-card small {
+            display: block;
+            color: #777;
+            font-weight: 700;
+        }
+
+        .topic-card ul {
+            margin: 14px 0 16px 18px;
+            color: #555;
+        }
+
+        .topic-card li {
+            margin: 6px 0;
+        }
+
+        .topic-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mini-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #00aaff;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .mini-btn.secondary {
+            background: #f0f4f8;
+            color: #00aaff;
+        }
+
+        .faq-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .faq-item {
+            padding: 22px;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+        }
+
+        .cta-panel {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #00aaff, #0077aa);
+            color: #fff;
+            border-radius: 22px;
+            padding: 42px 24px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,170,255,0.22);
+        }
+
+        .cta-panel h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .cta-panel p {
+            font-size: 18px;
+            max-width: 780px;
+            margin: 0 auto 22px;
+        }
+
+        .cta-panel .btn {
+            background: #fff;
+            color: #008ecc;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 22px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #00aaff;
+            margin: 0 15px;
+            transition: color 0.3s;
+            font-size: 20px;
+        }
+
+        footer a:hover {
+            color: #008ecc;
+        }
+
+        @media (max-width: 1100px) {
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 980px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .intro-grid,
+            .split-grid,
+            .banner-grid,
+            .topic-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .asset-grid,
+            .register-grid,
+            .evidence-grid,
+            .status-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .intro-image img,
+            .split-image img {
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: auto;
+                padding: 115px 16px 62px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 56px 16px;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
+
+            .content-card,
+            .topic-card,
+            .step-card,
+            .faq-item {
+                padding: 22px;
+            }
+
+            .asset-grid,
+            .register-grid,
+            .evidence-grid,
+            .status-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .asset-card img,
+            .register-card img,
+            .evidence-card img {
+                height: 210px;
+            }
+
+            .banner-card,
+            .banner-card img {
+                min-height: 300px;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Asset Register System",
+        "url": "https://edigitalsolutions.vercel.app/asset-register-system.html",
+        "description": "A detailed asset register system guide explaining equipment records, fleet records, asset numbers, fit-for-use status, statutory testing, maintenance, inspections, expiry dates and how eSHEQ Comply supports SHEQ asset control.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "EDigital Solutions",
+            "url": "https://edigitalsolutions.vercel.app/"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "eSHEQ Comply",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://www.esheqcomply.com/",
+            "description": "A SHEQ compliance management system for asset registers, inspections, legal compliance, statutory testing, safety files, audits, risk assessments, contractor management and training records."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EDigital Solutions",
+            "url": "https://edigitalsolutions.vercel.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edigitalsolutions.vercel.app/logo.jpg"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "eSHEQ Comply Asset Register System",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://www.esheqcomply.com/",
+        "description": "The eSHEQ Comply asset register module helps manage equipment, asset numbers, descriptions, serial numbers, categories, areas, photos, fit-for-use status, statutory testing, fleet records and maintenance evidence.",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.esheqcomply.com/",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://edigitalsolutions.vercel.app/index.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "eSHEQ Comply Newsletter",
+                "item": "https://edigitalsolutions.vercel.app/newseasheq.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Asset Register System",
+                "item": "https://edigitalsolutions.vercel.app/asset-register-system.html"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an asset register system?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An asset register system helps a company manage equipment records, asset numbers, descriptions, serial numbers, categories, areas, fit-for-use status, inspections, maintenance records and statutory testing evidence."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can eSHEQ Comply help with asset registers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. eSHEQ Comply can help manage asset records, fleet records, asset photos, categories, areas, fit-for-use status, maintenance evidence, statutory testing and inspection records."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should be included in an asset register?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An asset register should include an asset number, description, make or model, serial number, registration number if applicable, area, category, condition, fit-for-use status, inspection records and maintenance or testing evidence."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why use digital asset register software?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Digital asset register software helps reduce scattered records by keeping assets, inspections, testing records, maintenance evidence, expiry dates and fit-for-use status in a structured system."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="hero">
+        <img
+            class="hero-bg"
+            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1800"
+            alt="Asset register system team reviewing equipment and compliance records"
+            onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1800';"
+        >
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-truck-pickup"></i>
+                Asset Register System
+            </div>
+
+            <h1>Asset Register System</h1>
+
+            <p>
+                A practical digital asset register guide for managing equipment, fleet records, asset numbers,
+                serial numbers, fit-for-use status, maintenance, inspections, statutory testing and SHEQ compliance evidence.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.esheqcomply.com/" target="_blank" rel="noopener">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    Visit eSHEQ Comply
+                </a>
+
+                <a class="btn btn-light" href="#asset-process">
+                    <i class="fas fa-route"></i>
+                    View Asset Process
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section>
+            <div class="intro-grid">
+                <article class="content-card">
+                    <h2>What is an asset register system?</h2>
+
+                    <p>
+                        An <strong>asset register system</strong> helps a company manage important equipment, tools, machinery, vehicles and
+                        statutory items in one structured register. It gives the business a clearer way to control asset numbers, descriptions,
+                        categories, areas, photos, serial numbers, fit-for-use status, inspection records and maintenance evidence.
+                    </p>
+
+                    <p>
+                        In SHEQ management, assets are not only financial items. They are also part of operational control, safety control and legal
+                        compliance. Equipment that is damaged, overdue for testing, not inspected or not fit for use can create safety risks and audit
+                        findings. A system like <strong>eSHEQ Comply</strong> helps keep asset information visible and easier to review.
+                    </p>
+
+                    <h3>Why asset register control matters</h3>
+
+                    <ul>
+                        <li>Equipment and tools must be identifiable and traceable.</li>
+                        <li>Fit-for-use status must be visible before equipment is used.</li>
+                        <li>Statutory testing records and maintenance evidence must be available.</li>
+                        <li>Asset inspections can identify defects before incidents happen.</li>
+                        <li>Asset records support audits, safety files, legal compliance and management review.</li>
+                    </ul>
+                </article>
+
+                <div class="intro-image">
+                    <img
+                        src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                        alt="Asset register and equipment inspection review"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1400';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>What an Asset Register System Helps Control</h2>
+                <p>
+                    A good asset register system keeps equipment information, condition, testing and inspection evidence organized.
+                </p>
+            </div>
+
+            <div class="status-grid">
+                <article class="status-card">
+                    <i class="fas fa-barcode"></i>
+                    <strong>Asset Numbers</strong>
+                    <span>Unique asset numbers, descriptions, categories, serial numbers and areas.</span>
+                </article>
+
+                <article class="status-card">
+                    <i class="fas fa-circle-check"></i>
+                    <strong>Fit For Use</strong>
+                    <span>Clear status showing whether equipment is safe and acceptable for use.</span>
+                </article>
+
+                <article class="status-card">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                    <strong>Maintenance</strong>
+                    <span>Maintenance records, service dates, repairs, findings and supporting evidence.</span>
+                </article>
+
+                <article class="status-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <strong>Testing</strong>
+                    <span>Statutory testing, inspection records, expiry dates and review evidence.</span>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>Asset Register System Features</h2>
+                <p>
+                    A practical asset register should support the full asset life cycle, from registration to inspection and review.
+                </p>
+            </div>
+
+            <div class="asset-grid">
+                <article class="asset-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Asset register data and equipment control"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="asset-content">
+                        <span class="tag"><i class="fas fa-barcode"></i> Register</span>
+                        <h3>Asset Number Control</h3>
+                        <p>Record asset numbers, descriptions, categories, areas, serial numbers, registration numbers and asset photos.</p>
+                        <a class="read-link" href="esheq-comply-system.html">View eSHEQ system</a>
+                    </div>
+                </article>
+
+                <article class="asset-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Equipment fit-for-use inspection"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="asset-content">
+                        <span class="tag"><i class="fas fa-circle-check"></i> Status</span>
+                        <h3>Fit-For-Use Status</h3>
+                        <p>Show whether an asset is fit for use, not fit for use, awaiting inspection, overdue or needing repair.</p>
+                        <a class="read-link" href="inspection-management-system.html">Open inspection page</a>
+                    </div>
+                </article>
+
+                <article class="asset-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Statutory testing records and compliance evidence"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="asset-content">
+                        <span class="tag"><i class="fas fa-clipboard-check"></i> Testing</span>
+                        <h3>Statutory Testing Records</h3>
+                        <p>Track statutory inspections, equipment testing, certificates, due dates, expiry dates and supporting records.</p>
+                        <a class="read-link" href="legal-compliance-system.html">Open legal page</a>
+                    </div>
+                </article>
+
+                <article class="asset-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184318/pexels-photo-3184318.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Maintenance register and service records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="asset-content">
+                        <span class="tag"><i class="fas fa-screwdriver-wrench"></i> Maintenance</span>
+                        <h3>Maintenance and Repairs</h3>
+                        <p>Keep maintenance records, service history, repairs, findings, responsible persons and close-out evidence.</p>
+                        <a class="read-link" href="risk-assessment-system.html">Open risk page</a>
+                    </div>
+                </article>
+
+                <article class="asset-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Fleet and vehicle register records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="asset-content">
+                        <span class="tag"><i class="fas fa-truck"></i> Fleet</span>
+                        <h3>Fleet Register Control</h3>
+                        <p>Manage vehicle records, registration numbers, licence expiry dates, service records and fleet maintenance evidence.</p>
+                        <a class="read-link" href="legal-compliance-system.html">Open compliance page</a>
+                    </div>
+                </article>
+
+                <article class="asset-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Asset training and safe use records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="asset-content">
+                        <span class="tag"><i class="fas fa-graduation-cap"></i> Training</span>
+                        <h3>Asset Use and Training</h3>
+                        <p>Link asset use to operator training, competency, induction records, toolbox talks and safe work instructions.</p>
+                        <a class="read-link" href="training-matrix-system.html">Open training page</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="alt" id="asset-process">
+            <div class="section-title">
+                <h2>Asset Register Process</h2>
+                <p>
+                    A digital asset register should help the team control assets from capture to review.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <article class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Add asset</h3>
+                    <p>Capture the asset number, description, category, area, serial number, registration number and photo.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Set requirements</h3>
+                    <p>Identify whether the asset needs inspections, statutory testing, maintenance, licence renewal or training.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Inspect asset</h3>
+                    <p>Complete checks, record findings, confirm condition and update the fit-for-use status.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">4</span>
+                    <h3>Track evidence</h3>
+                    <p>Attach service records, certificates, inspection reports, photos and supporting compliance evidence.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">5</span>
+                    <h3>Review status</h3>
+                    <p>Monitor overdue inspections, maintenance, testing, repairs, expired licences and assets not fit for use.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="banner-grid">
+                <div class="banner-card">
+                    <img
+                        src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        alt="Asset inspection and equipment status review"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600';"
+                    >
+                    <div class="banner-content">
+                        <h3>Asset control supports safer operations</h3>
+                        <p>
+                            Equipment should be identifiable, inspected, maintained and confirmed fit for use before it is used.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="banner-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Asset register evidence and maintenance follow-up"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="banner-content">
+                        <h3>Keep evidence ready</h3>
+                        <p>
+                            Maintenance, inspections and statutory testing records should be easy to find during audits and reviews.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>Asset Records to Manage</h2>
+                <p>
+                    Asset register records can differ by company and industry, but these are common areas that need control.
+                </p>
+            </div>
+
+            <div class="register-grid">
+                <article class="register-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Equipment register and asset details"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="register-content">
+                        <span class="tag"><i class="fas fa-screwdriver-wrench"></i> Equipment</span>
+                        <h3>Equipment Records</h3>
+                        <p>Asset number, description, make, serial number, area, category, inspection status and supporting files.</p>
+                    </div>
+                </article>
+
+                <article class="register-card">
+                    <img
+                        src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Statutory asset testing register"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/209230/pexels-photo-209230.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="register-content">
+                        <span class="tag"><i class="fas fa-certificate"></i> Statutory</span>
+                        <h3>Statutory Testing</h3>
+                        <p>Inspection certificates, test dates, expiry dates, next review dates, service provider records and evidence.</p>
+                    </div>
+                </article>
+
+                <article class="register-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Fleet records and vehicle compliance"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="register-content">
+                        <span class="tag"><i class="fas fa-truck-pickup"></i> Fleet</span>
+                        <h3>Fleet and Vehicle Records</h3>
+                        <p>Vehicle details, registration, licence expiry, service history, maintenance records and inspection evidence.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="split-grid">
+                <article class="content-card">
+                    <h2>Manual asset registers vs digital asset registers</h2>
+
+                    <p>
+                        Many companies start with a spreadsheet asset register. This can work for a small number of assets, but it becomes harder to manage
+                        when the company has many assets, different branches, statutory testing dates, maintenance records, inspections and photos.
+                    </p>
+
+                    <p>
+                        A digital asset register system helps keep the asset record and supporting evidence together. Instead of having one spreadsheet,
+                        separate photos, separate certificates and separate inspection files, the system gives users a structured place to manage each asset.
+                    </p>
+
+                    <h3>Digital asset register benefits</h3>
+
+                    <ul>
+                        <li>Less searching through old folders and spreadsheets.</li>
+                        <li>Clearer asset identification and asset ownership.</li>
+                        <li>Better control over fit-for-use status and inspections.</li>
+                        <li>Improved tracking of statutory testing and maintenance records.</li>
+                        <li>Stronger evidence for SHEQ audits, safety files and legal compliance reviews.</li>
+                    </ul>
+                </article>
+
+                <div class="split-image">
+                    <img
+                        src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                        alt="Digital asset register system and SHEQ asset records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>Asset Evidence to Keep Ready</h2>
+                <p>
+                    A proper asset register system should keep important supporting records attached and easy to review.
+                </p>
+            </div>
+
+            <div class="evidence-grid">
+                <article class="evidence-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Asset inspection evidence and records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="evidence-content">
+                        <span class="tag"><i class="fas fa-list-check"></i> Inspection</span>
+                        <h3>Inspection Evidence</h3>
+                        <p>Keep daily checks, monthly checks, inspection reports, failed items, corrective actions and close-out proof.</p>
+                    </div>
+                </article>
+
+                <article class="evidence-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Asset maintenance evidence and service history"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="evidence-content">
+                        <span class="tag"><i class="fas fa-screwdriver-wrench"></i> Maintenance</span>
+                        <h3>Maintenance Evidence</h3>
+                        <p>Keep service records, repair notes, maintenance schedules, invoices, work orders and supporting files.</p>
+                    </div>
+                </article>
+
+                <article class="evidence-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Asset audit evidence and statutory records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="evidence-content">
+                        <span class="tag"><i class="fas fa-magnifying-glass-chart"></i> Audit</span>
+                        <h3>Audit Evidence</h3>
+                        <p>Keep asset records ready for internal audits, legal compliance checks, safety files and management review.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>How eSHEQ Comply Supports Asset Registers</h2>
+                <p>
+                    eSHEQ Comply connects asset records with inspections, legal compliance, risk assessments, audits, safety files and training.
+                </p>
+            </div>
+
+            <div class="split-grid">
+                <article class="content-card">
+                    <h2>Assets linked to SHEQ evidence</h2>
+
+                    <p>
+                        Asset control supports many SHEQ activities. A ladder may need inspections. A vehicle may need licence renewal and service records.
+                        A lifting tool may need statutory testing. A piece of equipment may need training before it can be used. eSHEQ Comply helps keep these
+                        records inside one structured system.
+                    </p>
+
+                    <ul>
+                        <li>Asset numbers, categories, areas and descriptions.</li>
+                        <li>Photos, serial numbers and registration numbers.</li>
+                        <li>Fit-for-use status and inspection records.</li>
+                        <li>Fleet records, service history and licence tracking.</li>
+                        <li>Statutory testing and compliance evidence.</li>
+                        <li>Links to inspections, audits, risks, legal records and training.</li>
+                    </ul>
+                </article>
+
+                <article class="content-card">
+                    <h2>Better visibility for asset follow-up</h2>
+
+                    <p>
+                        Assets are only useful when they are safe, available and properly controlled. eSHEQ Comply helps users see which assets need
+                        inspection, which records are overdue and which items are not fit for use.
+                    </p>
+
+                    <ul>
+                        <li>Less searching through separate asset folders.</li>
+                        <li>Clearer review of asset condition and fit-for-use status.</li>
+                        <li>Better tracking of inspections and maintenance.</li>
+                        <li>Improved evidence for audits and legal compliance.</li>
+                        <li>More structured asset history for management review.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>Open Related eSHEQ Comply Pages</h2>
+                <p>
+                    Use these pages to learn more about the SHEQ system areas connected to asset register management.
+                </p>
+            </div>
+
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-hard-hat"></i></span>
+                        <div>
+                            <h3>SHEQ System South Africa</h3>
+                            <small>Main SHEQ system guide</small>
+                        </div>
+                    </div>
+                    <p>Read the main guide for companies searching for SHEQ software and compliance systems in South Africa.</p>
+                    <ul>
+                        <li>SHEQ system overview</li>
+                        <li>Compliance structure</li>
+                        <li>System modules</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="sheq-system-south-africa.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="esheq-comply-system.html">System page</a>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-list-check"></i></span>
+                        <div>
+                            <h3>Inspection Management System</h3>
+                            <small>Asset checks and inspection findings</small>
+                        </div>
+                    </div>
+                    <p>Asset registers connect directly to inspections, checklist records, findings and corrective actions.</p>
+                    <ul>
+                        <li>Inspection records</li>
+                        <li>Failed items</li>
+                        <li>Corrective actions</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="inspection-management-system.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="risk-assessment-system.html">Risk</a>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-scale-balanced"></i></span>
+                        <div>
+                            <h3>Legal Compliance System</h3>
+                            <small>Statutory testing and legal evidence</small>
+                        </div>
+                    </div>
+                    <p>Some assets need statutory testing, legal records, permits, licences and inspection certificates.</p>
+                    <ul>
+                        <li>Statutory testing</li>
+                        <li>Permits and licences</li>
+                        <li>Legal evidence</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="legal-compliance-system.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="iso-audit-system.html">Audits</a>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-graduation-cap"></i></span>
+                        <div>
+                            <h3>Training Matrix System</h3>
+                            <small>Operator training and competency</small>
+                        </div>
+                    </div>
+                    <p>Some equipment should only be used by trained or competent employees and contractors.</p>
+                    <ul>
+                        <li>Training records</li>
+                        <li>Operator competency</li>
+                        <li>Induction evidence</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="training-matrix-system.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="safety-file-system.html">Safety files</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>Asset Register System Questions</h2>
+                <p>
+                    Simple answers for users searching for asset register software and digital equipment register systems.
+                </p>
+            </div>
+
+            <div class="faq-grid">
+                <article class="faq-item">
+                    <h3>What is an asset register system?</h3>
+                    <p>An asset register system helps manage equipment, vehicles, tools, asset numbers, serial numbers, categories, inspections, maintenance and fit-for-use status.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Can eSHEQ Comply manage asset registers?</h3>
+                    <p>Yes. eSHEQ Comply can support asset records, fleet records, photos, categories, areas, inspections, maintenance records and statutory testing evidence.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>What should an asset register include?</h3>
+                    <p>An asset register should include asset number, description, make, serial number, area, category, status, inspection records, maintenance records and testing evidence.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>What does fit for use mean?</h3>
+                    <p>Fit for use means the asset is in an acceptable condition for use based on inspections, maintenance, testing and company requirements.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>How does asset control link to inspections?</h3>
+                    <p>Assets need inspections to confirm condition, identify defects, raise corrective actions and update fit-for-use status.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>How does asset control link to legal compliance?</h3>
+                    <p>Some assets require statutory testing, permits, licences, service records or inspection certificates that must be kept as legal compliance evidence.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="cta-panel">
+                <h2>Need an Asset Register System?</h2>
+
+                <p>
+                    eSHEQ Comply helps businesses manage asset numbers, equipment records, fleet records, fit-for-use status,
+                    inspections, maintenance, statutory testing, legal evidence, audits, risk assessments and SHEQ compliance records.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn" href="https://www.esheqcomply.com/" target="_blank" rel="noopener">
+                        Visit eSHEQ Comply
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a class="btn" href="newseasheq.html">
+                        Back to Newsletter
+                        <i class="fas fa-newspaper"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </p>
+
+        <p>&copy; <span id="footer-year"></span> EDigital Solutions. All rights reserved.</p>
+
+        <script>
+            (function() {
+                const startYear = 2024;
+                const currentYear = new Date().getFullYear();
+                const yearText = currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+                document.getElementById('footer-year').textContent = yearText;
+            })();
+        </script>
+    </footer>
+
+    <script src="load-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Training Matrix System | Employee Training Software South Africa | eSHEQ Comply</title>
+
+    <meta name="description" content="Training matrix system guide for South African companies. Learn how eSHEQ Comply helps manage employee training records, competencies, inductions, expiry dates, certificates, legal appointments, contractors and SHEQ compliance evidence.">
+    <meta name="keywords" content="training matrix system, training matrix software South Africa, employee training matrix, competency matrix system, SHEQ training records, training compliance software, induction management system, contractor training records, training expiry tracking, eSHEQ Comply training matrix, employee competency system, digital training register">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#00aaff">
+
+    <link rel="canonical" href="https://edigitalsolutions.vercel.app/training-matrix-system.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Training Matrix System | Employee Training Software">
+    <meta property="og:description" content="A practical training matrix system guide for employee training records, competencies, inductions, expiry dates, certificates and SHEQ compliance evidence.">
+    <meta property="og:url" content="https://edigitalsolutions.vercel.app/training-matrix-system.html">
+    <meta property="og:image" content="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1600">
+    <meta property="og:site_name" content="EDigital Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Training Matrix System | eSHEQ Comply">
+    <meta name="twitter:description" content="Manage employee training records, competencies, inductions, certificates, expiry dates and SHEQ training evidence with eSHEQ Comply.">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1600">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="https://edigitalsolutions.vercel.app/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="nav-styles.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 2000;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+            outline: 2px solid #00aaff;
+            outline-offset: 2px;
+        }
+
+        .hero {
+            min-height: 94vh;
+            padding: 135px 20px 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(1100px 650px at 50% 28%, rgba(0,170,255,0.36), rgba(0,0,0,0.76));
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.70));
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1000px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.26);
+            backdrop-filter: blur(6px);
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 58px;
+            line-height: 1.08;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.70);
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.11);
+            padding: 17px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-actions {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-weight: 900;
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #00aaff;
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(0,170,255,0.30);
+        }
+
+        .btn-primary:hover {
+            background: #008ecc;
+        }
+
+        .btn-light {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.32);
+        }
+
+        section {
+            padding: 78px 20px;
+            background: #ffffff;
+        }
+
+        section.alt {
+            background: #f0f4f8;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .section-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 34px;
+            color: #00aaff;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 14px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 3px;
+            background: #00aaff;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 99px;
+        }
+
+        .section-title p {
+            max-width: 920px;
+            margin: 16px auto 0;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .intro-grid,
+        .split-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .content-card,
+        .training-card,
+        .record-card,
+        .topic-card,
+        .step-card,
+        .faq-item,
+        .banner-card,
+        .status-card,
+        .evidence-card {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.09);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+
+        .content-card {
+            padding: 30px;
+        }
+
+        .content-card h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #00aaff;
+            font-size: 32px;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .content-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            font-size: 23px;
+            margin: 20px 0 8px;
+        }
+
+        .content-card p {
+            color: #555;
+            font-size: 17px;
+            margin-bottom: 14px;
+        }
+
+        .content-card ul {
+            margin: 16px 0 0 20px;
+            color: #555;
+        }
+
+        .content-card li {
+            margin: 8px 0;
+        }
+
+        .intro-image,
+        .split-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+        }
+
+        .intro-image img,
+        .split-image img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+        }
+
+        .status-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .status-card {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .status-card i {
+            color: #00aaff;
+            font-size: 31px;
+            margin-bottom: 12px;
+        }
+
+        .status-card strong {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .status-card span {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .training-grid,
+        .record-grid,
+        .evidence-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .training-card,
+        .record-card,
+        .evidence-card,
+        .topic-card,
+        .step-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .training-card:hover,
+        .record-card:hover,
+        .evidence-card:hover,
+        .topic-card:hover,
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+        }
+
+        .training-card img,
+        .record-card img,
+        .evidence-card img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            background: #e9eef2;
+        }
+
+        .training-content,
+        .record-content,
+        .evidence-content {
+            padding: 20px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: #eef8ff;
+            color: #00aaff;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .training-card h3,
+        .record-card h3,
+        .evidence-card h3,
+        .topic-card h3,
+        .step-card h3,
+        .faq-item h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .training-card h3,
+        .record-card h3,
+        .evidence-card h3 {
+            font-size: 21px;
+        }
+
+        .training-card p,
+        .record-card p,
+        .evidence-card p,
+        .topic-card p,
+        .step-card p,
+        .faq-item p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+
+        .read-link {
+            color: #00aaff;
+            font-weight: 900;
+        }
+
+        .read-link:hover {
+            color: #008ecc;
+        }
+
+        .process-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .step-card {
+            padding: 22px;
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #00aaff;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            margin-bottom: 12px;
+            box-shadow: 0 6px 16px rgba(0,170,255,0.25);
+        }
+
+        .step-card h3 {
+            font-size: 18px;
+        }
+
+        .banner-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .banner-card {
+            position: relative;
+            min-height: 380px;
+        }
+
+        .banner-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            object-fit: cover;
+        }
+
+        .banner-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.70));
+        }
+
+        .banner-content {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .banner-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .banner-content p {
+            font-size: 17px;
+        }
+
+        .topic-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .topic-card {
+            padding: 24px;
+        }
+
+        .topic-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .topic-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 14px;
+            background: #eef8ff;
+            color: #00aaff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .topic-card h3 {
+            color: #00aaff;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .topic-card small {
+            display: block;
+            color: #777;
+            font-weight: 700;
+        }
+
+        .topic-card ul {
+            margin: 14px 0 16px 18px;
+            color: #555;
+        }
+
+        .topic-card li {
+            margin: 6px 0;
+        }
+
+        .topic-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mini-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #00aaff;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .mini-btn.secondary {
+            background: #f0f4f8;
+            color: #00aaff;
+        }
+
+        .faq-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .faq-item {
+            padding: 22px;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+        }
+
+        .cta-panel {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #00aaff, #0077aa);
+            color: #fff;
+            border-radius: 22px;
+            padding: 42px 24px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,170,255,0.22);
+        }
+
+        .cta-panel h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .cta-panel p {
+            font-size: 18px;
+            max-width: 780px;
+            margin: 0 auto 22px;
+        }
+
+        .cta-panel .btn {
+            background: #fff;
+            color: #008ecc;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 22px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #00aaff;
+            margin: 0 15px;
+            transition: color 0.3s;
+            font-size: 20px;
+        }
+
+        footer a:hover {
+            color: #008ecc;
+        }
+
+        @media (max-width: 1100px) {
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 980px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .intro-grid,
+            .split-grid,
+            .banner-grid,
+            .topic-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .training-grid,
+            .record-grid,
+            .evidence-grid,
+            .status-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .intro-image img,
+            .split-image img {
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: auto;
+                padding: 115px 16px 62px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 56px 16px;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
+
+            .content-card,
+            .topic-card,
+            .step-card,
+            .faq-item {
+                padding: 22px;
+            }
+
+            .training-grid,
+            .record-grid,
+            .evidence-grid,
+            .status-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .training-card img,
+            .record-card img,
+            .evidence-card img {
+                height: 210px;
+            }
+
+            .banner-card,
+            .banner-card img {
+                min-height: 300px;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Training Matrix System",
+        "url": "https://edigitalsolutions.vercel.app/training-matrix-system.html",
+        "description": "A detailed training matrix system guide explaining employee training records, competencies, inductions, certificates, expiry dates, legal appointments, contractor training and how eSHEQ Comply supports SHEQ training compliance.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "EDigital Solutions",
+            "url": "https://edigitalsolutions.vercel.app/"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "eSHEQ Comply",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://www.esheqcomply.com/",
+            "description": "A SHEQ compliance management system for training records, competency tracking, inductions, safety files, audits, inspections, risk assessments, contractor management, asset registers and legal compliance."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "EDigital Solutions",
+            "url": "https://edigitalsolutions.vercel.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://edigitalsolutions.vercel.app/logo.jpg"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "eSHEQ Comply Training Matrix System",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://www.esheqcomply.com/",
+        "description": "The eSHEQ Comply training matrix module helps manage employee training records, competencies, certificates, inductions, expiry dates, legal appointments, contractor training records and SHEQ training evidence.",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.esheqcomply.com/",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://edigitalsolutions.vercel.app/index.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "eSHEQ Comply Newsletter",
+                "item": "https://edigitalsolutions.vercel.app/newseasheq.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Training Matrix System",
+                "item": "https://edigitalsolutions.vercel.app/training-matrix-system.html"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a training matrix system?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A training matrix system helps a company manage employee training requirements, completed training, certificates, competencies, inductions, expiry dates, refresher training and training compliance evidence."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can eSHEQ Comply help with training records?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. eSHEQ Comply can help manage employee training records, competency records, induction records, certificates, expiry dates, legal appointment training and contractor training evidence."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should be included in a training matrix?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A training matrix should include employees, roles, required training, completed training, certificate dates, expiry dates, refresher dates, competency status and evidence files."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why use digital training matrix software?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Digital training matrix software helps reduce scattered records by keeping training requirements, certificates, expiry dates, employee competencies and evidence in a structured system."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="hero">
+        <img
+            class="hero-bg"
+            src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1800"
+            alt="Training matrix system team learning and reviewing training records"
+            onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1800';"
+        >
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Training Matrix System
+            </div>
+
+            <h1>Training Matrix System</h1>
+
+            <p>
+                A practical digital training matrix guide for managing employee training records, competencies,
+                inductions, certificates, refresher training, expiry dates, contractor training and SHEQ compliance evidence.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.esheqcomply.com/" target="_blank" rel="noopener">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                    Visit eSHEQ Comply
+                </a>
+
+                <a class="btn btn-light" href="#training-process">
+                    <i class="fas fa-route"></i>
+                    View Training Process
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section>
+            <div class="intro-grid">
+                <article class="content-card">
+                    <h2>What is a training matrix system?</h2>
+
+                    <p>
+                        A <strong>training matrix system</strong> helps a company manage training requirements, employee competencies,
+                        completed training, induction records, certificates, expiry dates and refresher training in one structured place.
+                        It gives the business a clear view of who is trained, who still needs training and which records are expiring.
+                    </p>
+
+                    <p>
+                        In a SHEQ environment, training records are not only HR documents. They are part of safety files, legal compliance,
+                        risk assessments, inspections, contractor management and audit evidence. A system like <strong>eSHEQ Comply</strong>
+                        helps make training records easier to control and easier to prove when required.
+                    </p>
+
+                    <h3>Why training matrix control matters</h3>
+
+                    <ul>
+                        <li>Employees must be competent for the work they perform.</li>
+                        <li>Training certificates and licences can expire.</li>
+                        <li>Inductions and refresher training need proper records.</li>
+                        <li>Audits often require proof of training and competency.</li>
+                        <li>Contractors may need training evidence before site work starts.</li>
+                    </ul>
+                </article>
+
+                <div class="intro-image">
+                    <img
+                        src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                        alt="Employee training records and competency review"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1400';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>What a Training Matrix System Helps Control</h2>
+                <p>
+                    A good training matrix system keeps employee training, contractor training and competency evidence visible and structured.
+                </p>
+            </div>
+
+            <div class="status-grid">
+                <article class="status-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <strong>Employees</strong>
+                    <span>Employee details, roles, job requirements and training status.</span>
+                </article>
+
+                <article class="status-card">
+                    <i class="fas fa-certificate"></i>
+                    <strong>Certificates</strong>
+                    <span>Training certificates, licences, induction evidence and competency files.</span>
+                </article>
+
+                <article class="status-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <strong>Expiry Dates</strong>
+                    <span>Renewal dates, refresher training, certificate expiry and reminders.</span>
+                </article>
+
+                <article class="status-card">
+                    <i class="fas fa-folder-open"></i>
+                    <strong>Evidence</strong>
+                    <span>Training records for audits, safety files and legal compliance reviews.</span>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>Training Matrix System Features</h2>
+                <p>
+                    A practical training matrix should show what training is required, what is completed and what needs follow-up.
+                </p>
+            </div>
+
+            <div class="training-grid">
+                <article class="training-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Employee training matrix records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="training-content">
+                        <span class="tag"><i class="fas fa-users"></i> Employees</span>
+                        <h3>Employee Training Records</h3>
+                        <p>Manage each employee’s training history, certificates, induction records, competency evidence and renewal dates.</p>
+                        <a class="read-link" href="esheq-comply-system.html">View eSHEQ system</a>
+                    </div>
+                </article>
+
+                <article class="training-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Competency matrix and training requirements"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="training-content">
+                        <span class="tag"><i class="fas fa-list-check"></i> Matrix</span>
+                        <h3>Competency Matrix</h3>
+                        <p>Compare job roles against required training so gaps can be identified and planned.</p>
+                        <a class="read-link" href="risk-assessment-system.html">Open risk page</a>
+                    </div>
+                </article>
+
+                <article class="training-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Training certificates and document control"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="training-content">
+                        <span class="tag"><i class="fas fa-certificate"></i> Certificates</span>
+                        <h3>Certificate Control</h3>
+                        <p>Store training certificates, licences, attendance registers, induction evidence and supporting files.</p>
+                        <a class="read-link" href="legal-compliance-system.html">Open legal page</a>
+                    </div>
+                </article>
+
+                <article class="training-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Induction training and onboarding records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="training-content">
+                        <span class="tag"><i class="fas fa-person-chalkboard"></i> Induction</span>
+                        <h3>Inductions and Onboarding</h3>
+                        <p>Control employee onboarding, site inductions, contractor inductions and awareness training records.</p>
+                        <a class="read-link" href="safety-file-system.html">Open safety file page</a>
+                    </div>
+                </article>
+
+                <article class="training-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184318/pexels-photo-3184318.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Training expiry tracking and renewal planning"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="training-content">
+                        <span class="tag"><i class="fas fa-calendar-days"></i> Expiry</span>
+                        <h3>Expiry Date Tracking</h3>
+                        <p>Track certificate expiry dates, refresher training, renewal reminders and training that needs follow-up.</p>
+                        <a class="read-link" href="inspection-management-system.html">Open inspection page</a>
+                    </div>
+                </article>
+
+                <article class="training-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Contractor training and site competency records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="training-content">
+                        <span class="tag"><i class="fas fa-users-gear"></i> Contractors</span>
+                        <h3>Contractor Training Records</h3>
+                        <p>Keep contractor induction records, training certificates and competency evidence linked to contractor files.</p>
+                        <a class="read-link" href="contractor-management-system.html">Open contractor page</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="alt" id="training-process">
+            <div class="section-title">
+                <h2>Training Matrix Process</h2>
+                <p>
+                    A digital training matrix should help the team control training from requirement to renewal.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <article class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Add employees</h3>
+                    <p>Capture employee details, role, department, start date and training requirements.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Set requirements</h3>
+                    <p>Link job roles, legal appointments, assets, risks and site work to required training.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Upload evidence</h3>
+                    <p>Attach certificates, induction records, attendance registers, licences and competency proof.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">4</span>
+                    <h3>Track expiry</h3>
+                    <p>Monitor certificate expiry dates, refresher training dates and renewal requirements.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">5</span>
+                    <h3>Review gaps</h3>
+                    <p>Check missing records, expired training, role gaps and evidence required for audits.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="banner-grid">
+                <div class="banner-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        alt="Employee training matrix and competency review"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1600';"
+                    >
+                    <div class="banner-content">
+                        <h3>Training evidence should be easy to prove</h3>
+                        <p>
+                            Training records are important evidence for audits, safety files, legal compliance and management review.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="banner-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Training expiry date tracking and follow-up"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="banner-content">
+                        <h3>Track renewals before expiry</h3>
+                        <p>
+                            Certificates, licences, inductions and refresher training can expire and need proper follow-up.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>Training Records to Manage</h2>
+                <p>
+                    Training records can differ by company, role and risk level, but these are common areas to control.
+                </p>
+            </div>
+
+            <div class="record-grid">
+                <article class="record-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Employee induction records and training files"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="record-content">
+                        <span class="tag"><i class="fas fa-person-circle-check"></i> Induction</span>
+                        <h3>Induction Records</h3>
+                        <p>Company inductions, site inductions, contractor inductions, onboarding packs and awareness records.</p>
+                    </div>
+                </article>
+
+                <article class="record-card">
+                    <img
+                        src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Operator training and equipment competency"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/209230/pexels-photo-209230.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="record-content">
+                        <span class="tag"><i class="fas fa-helmet-safety"></i> Competency</span>
+                        <h3>Operator Competency</h3>
+                        <p>Operator certificates, equipment competency, safe use records and role-specific training evidence.</p>
+                    </div>
+                </article>
+
+                <article class="record-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Toolbox talks and training attendance records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="record-content">
+                        <span class="tag"><i class="fas fa-clipboard-user"></i> Awareness</span>
+                        <h3>Toolbox Talks and Awareness</h3>
+                        <p>Attendance registers, toolbox talks, safety awareness sessions and communication records.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="split-grid">
+                <article class="content-card">
+                    <h2>Manual training files vs a digital training matrix</h2>
+
+                    <p>
+                        Many companies keep training records in folders and use spreadsheets to track expiry dates. This can become difficult when the company
+                        has many employees, contractors, job roles, certificates and refresher training dates. Files may be missing, certificates may expire
+                        and audits may become stressful because evidence is not easy to find.
+                    </p>
+
+                    <p>
+                        A digital training matrix system keeps the requirement, employee record, evidence and expiry date together. It helps the team see
+                        which training is completed, which training is missing and which records need renewal.
+                    </p>
+
+                    <h3>Digital training matrix benefits</h3>
+
+                    <ul>
+                        <li>Less searching through old employee folders.</li>
+                        <li>Clearer visibility of training gaps and expired certificates.</li>
+                        <li>Better control over inductions, competencies and refresher training.</li>
+                        <li>Improved evidence for audits, safety files and legal compliance reviews.</li>
+                        <li>More structured employee and contractor training history.</li>
+                    </ul>
+                </article>
+
+                <div class="split-image">
+                    <img
+                        src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                        alt="Digital training matrix system and SHEQ training records"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1400';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>Training Evidence to Keep Ready</h2>
+                <p>
+                    A proper training matrix system should make training proof easy to review during audits and safety file checks.
+                </p>
+            </div>
+
+            <div class="evidence-grid">
+                <article class="evidence-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Training certificates and competency evidence"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="evidence-content">
+                        <span class="tag"><i class="fas fa-certificate"></i> Certificates</span>
+                        <h3>Certificate Evidence</h3>
+                        <p>Keep copies of training certificates, licences, competency records and proof of successful completion.</p>
+                    </div>
+                </article>
+
+                <article class="evidence-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Training audit evidence and management review"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="evidence-content">
+                        <span class="tag"><i class="fas fa-magnifying-glass-chart"></i> Audit</span>
+                        <h3>Audit Evidence</h3>
+                        <p>Keep training evidence ready for internal audits, client checks, legal reviews and management review.</p>
+                    </div>
+                </article>
+
+                <article class="evidence-card">
+                    <img
+                        src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Training follow-up and renewal evidence"
+                        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200';"
+                    >
+                    <div class="evidence-content">
+                        <span class="tag"><i class="fas fa-calendar-check"></i> Renewals</span>
+                        <h3>Renewal Evidence</h3>
+                        <p>Track refresher training, renewals, updated certificates, expired training and action records.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>How eSHEQ Comply Supports Training Matrix Control</h2>
+                <p>
+                    eSHEQ Comply connects training records with safety files, audits, inspections, legal compliance, contractors, risks and assets.
+                </p>
+            </div>
+
+            <div class="split-grid">
+                <article class="content-card">
+                    <h2>Training records linked to SHEQ evidence</h2>
+
+                    <p>
+                        Training records are used across the whole SHEQ system. Risk assessments may require specific training. Legal appointments may need
+                        competency evidence. Contractors may need inductions before site work. Assets may need trained operators. eSHEQ Comply helps keep these
+                        records structured and easier to find.
+                    </p>
+
+                    <ul>
+                        <li>Employee training records and certificates.</li>
+                        <li>Induction and onboarding evidence.</li>
+                        <li>Competency records and role requirements.</li>
+                        <li>Certificate expiry and refresher training dates.</li>
+                        <li>Contractor training and site induction records.</li>
+                        <li>Links to audits, risks, safety files, assets and legal compliance.</li>
+                    </ul>
+                </article>
+
+                <article class="content-card">
+                    <h2>Better visibility for training follow-up</h2>
+
+                    <p>
+                        Training control is stronger when the team can see what is missing, what has expired and what must be renewed.
+                        eSHEQ Comply helps users focus on training gaps and evidence needed for audits, safety files and client reviews.
+                    </p>
+
+                    <ul>
+                        <li>Less searching through separate training folders.</li>
+                        <li>Clearer review of training gaps and expired certificates.</li>
+                        <li>Better preparation for audits and safety file checks.</li>
+                        <li>Improved link between training and risk controls.</li>
+                        <li>More structured training history for each employee.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="section-title">
+                <h2>Open Related eSHEQ Comply Pages</h2>
+                <p>
+                    Use these pages to learn more about the SHEQ system areas connected to training matrix management.
+                </p>
+            </div>
+
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-hard-hat"></i></span>
+                        <div>
+                            <h3>SHEQ System South Africa</h3>
+                            <small>Main SHEQ system guide</small>
+                        </div>
+                    </div>
+                    <p>Read the main guide for companies searching for SHEQ software and compliance systems in South Africa.</p>
+                    <ul>
+                        <li>SHEQ system overview</li>
+                        <li>Compliance structure</li>
+                        <li>System modules</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="sheq-system-south-africa.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="esheq-comply-system.html">System page</a>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-folder-tree"></i></span>
+                        <div>
+                            <h3>Safety File System</h3>
+                            <small>Training evidence in safety files</small>
+                        </div>
+                    </div>
+                    <p>Safety files often require induction records, training certificates and competency evidence.</p>
+                    <ul>
+                        <li>Safety file evidence</li>
+                        <li>Induction records</li>
+                        <li>Contractor training</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="safety-file-system.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="contractor-management-system.html">Contractors</a>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-triangle-exclamation"></i></span>
+                        <div>
+                            <h3>Risk Assessment System</h3>
+                            <small>Training linked to risk controls</small>
+                        </div>
+                    </div>
+                    <p>Risk assessments often identify training, competency and awareness requirements for safe work.</p>
+                    <ul>
+                        <li>Hazard controls</li>
+                        <li>Competency needs</li>
+                        <li>Toolbox talks</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="risk-assessment-system.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="inspection-management-system.html">Inspections</a>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-top">
+                        <span class="topic-icon"><i class="fas fa-scale-balanced"></i></span>
+                        <div>
+                            <h3>Legal Compliance System</h3>
+                            <small>Training and legal appointments</small>
+                        </div>
+                    </div>
+                    <p>Some legal appointments and statutory roles require proof of training, competence and authorisation.</p>
+                    <ul>
+                        <li>Legal appointments</li>
+                        <li>Certificates</li>
+                        <li>Expiry dates</li>
+                    </ul>
+                    <div class="topic-actions">
+                        <a class="mini-btn" href="legal-compliance-system.html"><i class="fas fa-arrow-right"></i> Open guide</a>
+                        <a class="mini-btn secondary" href="asset-register-system.html">Assets</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>Training Matrix System Questions</h2>
+                <p>
+                    Simple answers for users searching for training matrix software and employee competency systems.
+                </p>
+            </div>
+
+            <div class="faq-grid">
+                <article class="faq-item">
+                    <h3>What is a training matrix system?</h3>
+                    <p>A training matrix system helps manage employee training requirements, completed training, certificates, expiry dates, competency records and refresher training.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Can eSHEQ Comply manage training records?</h3>
+                    <p>Yes. eSHEQ Comply can support employee training records, certificates, inductions, competencies, expiry dates and contractor training evidence.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>What should a training matrix include?</h3>
+                    <p>A training matrix should include employees, job roles, required training, completed training, certificate dates, expiry dates and evidence files.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Why track training expiry dates?</h3>
+                    <p>Expiry tracking helps prevent certificates, licences, inductions and refresher training from becoming outdated without follow-up.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>How does training link to risk assessments?</h3>
+                    <p>Risk assessments often identify training requirements needed to control hazards and ensure people understand safe work methods.</p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>How does training link to audits?</h3>
+                    <p>Audits often check whether employees and contractors are trained, competent and able to provide evidence for required work activities.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="cta-panel">
+                <h2>Need a Training Matrix System?</h2>
+
+                <p>
+                    eSHEQ Comply helps businesses manage employee training records, certificates, inductions, competencies,
+                    expiry dates, contractor training, safety files, audits, risk assessments, assets and SHEQ compliance evidence.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn" href="https://www.esheqcomply.com/" target="_blank" rel="noopener">
+                        Visit eSHEQ Comply
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a class="btn" href="newseasheq.html">
+                        Back to Newsletter
+                        <i class="fas fa-newspaper"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://www.facebook.com/profile.php?id=61569058768541" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </p>
+
+        <p>&copy; <span id="footer-year"></span> EDigital Solutions. All rights reserved.</p>
+
+        <script>
+            (function() {
+                const startYear = 2024;
+                const currentYear = new Date().getFullYear();
+                const yearText = currentYear > startYear ? `${startYear} - ${currentYear}` : `${startYear}`;
+                document.getElementById('footer-year').textContent = yearText;
+            })();
+        </script>
+    </footer>
+
+    <script src="load-nav.js"></script>
+</body>
+</html>
