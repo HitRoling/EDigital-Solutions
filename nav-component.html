@@ -6,13 +6,16 @@
             <span>EDigital Solutions</span>
         </a>
 
-        <div class="menu-toggle" aria-label="Open menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
+        <div class="menu-toggle" aria-label="Open menu" role="button" tabindex="0">
+            <i class="fas fa-bars"></i>
+        </div>
 
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="knowledge-hub.html">Knowledge Hub</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="newseasheq.html">Newsletter</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
@@ -22,11 +25,17 @@
     (function() {
         // Auto-detect active page
         var path = window.location.pathname.split('/').pop() || 'index.html';
-        if (path === '') path = 'index.html';
+
+        if (path === '') {
+            path = 'index.html';
+        }
+
         var links = document.querySelectorAll('nav ul li a');
+
         links.forEach(function(link) {
             var href = link.getAttribute('href');
-            if (path === href || path === '' && href === 'index.html') {
+
+            if (path === href || (path === '' && href === 'index.html')) {
                 link.classList.add('active');
             }
         });
@@ -34,17 +43,24 @@
         // Mobile toggle
         var toggle = document.querySelector('.menu-toggle');
         var menu = document.querySelector('nav ul');
+
         if (toggle && menu) {
             toggle.addEventListener('click', function() {
                 menu.classList.toggle('active');
                 toggle.classList.toggle('active');
             });
+
             toggle.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') menu.classList.toggle('active');
+                if (e.key === 'Enter') {
+                    menu.classList.toggle('active');
+                    toggle.classList.toggle('active');
+                }
             });
+
             menu.querySelectorAll('a').forEach(function(a) {
                 a.addEventListener('click', function() {
                     menu.classList.remove('active');
+                    toggle.classList.remove('active');
                 });
             });
         }
@@ -52,9 +68,13 @@
         // Scroll effect
         window.addEventListener('scroll', function() {
             var nav = document.getElementById('navbar');
+
             if (nav) {
-                if (window.scrollY > 50) nav.classList.add('scrolled');
-                else nav.classList.remove('scrolled');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
             }
         });
     })();
