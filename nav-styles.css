@@ -22,7 +22,7 @@ nav .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -65,7 +65,7 @@ nav ul {
     align-items: center;
     margin: 0;
     padding: 0;
-    gap: 20px;
+    gap: 12px;
 }
 
 nav ul li {
@@ -75,16 +75,17 @@ nav ul li {
 nav ul li a {
     color: #333;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 6px;
     transition: all 0.3s ease;
     white-space: nowrap;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     color: #fff;
     background: #00aaff;
     box-shadow: 0 4px 12px rgba(0,170,255,0.3);
@@ -98,12 +99,33 @@ nav ul li a:hover, nav ul li a.active {
     transition: color 0.3s;
 }
 
-.menu-toggle:hover {
+.menu-toggle:hover,
+.menu-toggle.active {
     color: #00aaff;
+}
+
+/* Tablet Fix */
+@media (max-width: 900px) {
+    nav .brand span {
+        font-size: 16px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        padding: 8px 8px;
+    }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    nav .nav-inner {
+        gap: 12px;
+    }
+
     nav ul {
         flex-direction: column;
         background: rgba(255, 255, 255, 0.98);
@@ -114,19 +136,25 @@ nav ul li a:hover, nav ul li a.active {
         display: none;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         padding: 10px 0;
+        gap: 0;
     }
+
     nav ul.active {
         display: flex;
     }
+
     nav ul li {
         margin: 8px 0;
         width: 100%;
         text-align: center;
     }
+
     nav ul li a {
         display: block;
+        font-size: 13px;
         padding: 12px 20px;
     }
+
     .menu-toggle {
         display: block;
     }
@@ -137,6 +165,7 @@ nav ul li a:hover, nav ul li a.active {
         width: 28px;
         height: 28px;
     }
+
     nav .brand span {
         font-size: 14px;
     }
