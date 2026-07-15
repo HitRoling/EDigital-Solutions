@@ -7,14 +7,14 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            padding: 12px 0;
+            padding: 8px 0;
             z-index: 1000;
             transition: all 0.3s ease;
             border-bottom: 1px solid rgba(0,170,255,0.1);
         }
         nav.scrolled {
             background: rgba(255, 255, 255, 0.99);
-            padding: 8px 0;
+            padding: 6px 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         nav .nav-inner {
@@ -29,24 +29,53 @@
         nav .brand {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             font-family: 'Poppins', sans-serif;
-            font-weight: 700;
             color: #111;
-            letter-spacing: 0.5px;
+            letter-spacing: 0;
             white-space: nowrap;
-            font-size: 18px;
+            text-decoration: none;
         }
         nav .brand img {
-            width: 150px;
-            height: 150px;
+            width: 66px;
+            height: 66px;
             object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            flex: 0 0 66px;
+            border-radius: 14px;
+            background: transparent;
+            box-shadow: none;
             transition: transform 0.3s;
         }
         nav .brand img:hover {
             transform: scale(1.05);
+        }
+        nav .brand-wordmark {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            line-height: 1;
+        }
+        nav .brand-main {
+            color: #050505;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: 0;
+            line-height: 0.9;
+        }
+        nav .brand-e {
+            color: #129af2;
+            font-weight: 800;
+        }
+        nav .brand-sub {
+            color: #050505;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.45em;
+            line-height: 1;
+            text-transform: uppercase;
         }
         nav ul {
             list-style: none;
@@ -96,11 +125,23 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
+            nav .brand img {
+                width: 58px;
+                height: 58px;
+                flex-basis: 58px;
+            }
+            nav .brand-main {
+                font-size: 24px;
+            }
+            nav .brand-sub {
+                font-size: 10px;
+                letter-spacing: 0.36em;
+            }
             nav ul {
                 flex-direction: column;
                 background: rgba(255, 255, 255, 0.98);
                 position: absolute;
-                top: 60px;
+                top: calc(100% + 1px);
                 left: 0;
                 width: 100%;
                 display: none;
@@ -125,11 +166,16 @@
         }
         @media (max-width: 480px) {
             nav .brand img {
-                width: 56px;
-                height: 28px;
+                width: 44px;
+                height: 44px;
+                flex-basis: 44px;
             }
-            nav .brand span {
-                font-size: 15px;
+            nav .brand-main {
+                font-size: 20px;
+            }
+            nav .brand-sub {
+                font-size: 8px;
+                letter-spacing: 0.28em;
             }
         }
     </style>
@@ -138,9 +184,12 @@
     <!-- Navigation Menu -->
     <nav id="navbar">
         <div class="container nav-inner">
-            <a class="brand" href="index.html" aria-label="EDigital Solutions Home">
-                <img src="https://edigitalsolutions.vercel.app/logo.jpg" alt="EDigital Solutions logo">
-                <span>EDigital Solutions</span>
+            <a class="brand" href="index.html" aria-label="eDigital Solutions Home">
+                <img src="favicon-master-1024.png" alt="eDigital Solutions logo" width="72" height="72">
+                <span class="brand-wordmark" aria-label="eDigital Solutions">
+                    <span class="brand-main"><span class="brand-e">e</span>Digital</span>
+                    <span class="brand-sub">Solutions</span>
+                </span>
             </a>
 
             <div class="menu-toggle" aria-label="Open menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
